@@ -11,7 +11,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
             const user = data.find(person => person.name === name);
             const resultDiv = document.getElementById('result');
             if (user) {
-                resultDiv.textContent = `${user.name} 的座位号是：${user.seatNumber}`;
+                resultDiv.textContent = `您的座位号是：${user.seatNumber}`;
             } else {
                 resultDiv.textContent = "未找到该姓名的座位号。";
             }
