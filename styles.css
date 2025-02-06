@@ -9,9 +9,7 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center; /* 居中显示 */
-    align-items: center; /* 垂直居中 */
+    display: block; /* 改为 block 布局，使内容在页面顶部 */
 }
 
 .container {
@@ -24,6 +22,7 @@ body {
     max-width: 400px; /* 最大宽度 */
     box-sizing: border-box;
     overflow: hidden; /* 防止容器滚动 */
+    margin-top: 50px; /* 控制距离顶部的距离 */
 }
 
 h1 {
