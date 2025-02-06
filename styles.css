@@ -1,42 +1,42 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
+    margin: 0; /* Remove default margin for full height */
+    height: 100vh; /* Full height of the viewport */
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    margin: 0; /* Remove default margin for full height */
 }
 
 .container {
     background-color: #fff;
-    padding: 20px 40px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Make container full width */
-    max-width: 100%; /* Remove max-width to fully occupy screen */
-    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    width: 100%; /* Take full width */
+    max-width: 500px; /* Max width to prevent container from being too wide */
+    box-sizing: border-box; /* Padding included in width calculation */
 }
 
 input {
-    padding: 12px 20px; /* Increased padding for better interaction */
-    width: 100%; /* Input field takes full width */
-    margin-bottom: 15px; /* Add space between input and button */
+    padding: 12px 16px; /* Increased padding for better interaction */
+    width: 100%; /* Full width of the container */
+    margin-bottom: 15px; /* Spacing between input and button */
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px; /* Increased font size for better readability */
+    font-size: 16px; /* Increase font size for readability */
 }
 
 button {
-    padding: 12px 20px; /* Increased padding for a larger button */
+    padding: 12px 16px; /* Increased padding for better touchability */
     cursor: pointer;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 16px; /* Increased font size */
-    width: 100%; /* Button takes full width */
+    font-size: 16px; /* Increase font size */
+    width: 100%; /* Full width button */
 }
 
 button:hover {
@@ -45,22 +45,20 @@ button:hover {
 
 #result {
     margin-top: 20px;
-    font-size: 1.4em; /* Larger result text for better visibility */
+    font-size: 1.4em;
     color: #333;
 }
 
 @media (max-width: 480px) {
-    /* Adjust layout for smaller screens */
     .container {
-        padding: 15px 20px; /* Reduce padding on very small screens */
+        padding: 15px; /* Reduce padding for smaller screens */
     }
 
     input, button {
-        width: 100%; /* Ensure input and button take full width on smaller screens */
-        font-size: 18px; /* Larger font size for smaller devices */
+        font-size: 18px; /* Larger font size for readability */
     }
 
     #result {
-        font-size: 1.5em; /* Larger result text for small screens */
+        font-size: 1.5em; /* Larger result text on smaller screens */
     }
 }
