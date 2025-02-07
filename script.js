@@ -12,9 +12,15 @@ document.getElementById('searchButton').addEventListener('click', function() {
             resultDiv.innerHTML = ""; // 清空之前的结果
 
             if (results.length > 0) {
-                results.forEach(user => {
+                results.forEach((user, index) => {
                     const resultItem = document.createElement('p');
-                    resultItem.textContent = `您的座位号是：${user.seatNumber}，姓名：${user.name}`;
+                    if (results.length > 1) {
+                        // 如果结果超过一个，显示姓名
+                        resultItem.textContent = `姓名：${user.name}，座位号：${user.seatNumber}`;
+                    } else {
+                        // 如果只有一个结果，只显示座位号
+                        resultItem.textContent = `座位号：${user.seatNumber}`;
+                    }
                     resultDiv.appendChild(resultItem);
                 });
             } else {
