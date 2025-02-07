@@ -16,10 +16,10 @@ document.getElementById('searchButton').addEventListener('click', function() {
                     const resultItem = document.createElement('p');
                     if (results.length > 1) {
                         // 如果结果超过一个，显示姓名
-                        resultItem.textContent = `姓名：${user.name}，座位号：${user.seatNumber}`;
+                        resultItem.textContent = `姓名：${user.name}，您的座位号是：${user.seatNumber}`;
                     } else {
                         // 如果只有一个结果，只显示座位号
-                        resultItem.textContent = `座位号：${user.seatNumber}`;
+                        resultItem.textContent = `您的座位号是：${user.seatNumber}`;
                     }
                     resultDiv.appendChild(resultItem);
                 });
